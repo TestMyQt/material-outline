@@ -1,9 +1,10 @@
 #include <QCoreApplication>
 #include <iostream>
-#include "useful.h"
+#include "hello.h"
 
 using namespace std;
 
 int main() {
-
+    hello l;
+    l.world();
 }

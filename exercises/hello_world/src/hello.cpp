@@ -1,13 +1,13 @@
-#include "useful.h"
+#include "hello.h"
 #include <QDebug>
 
-useful::useful() {
+hello::hello() {
 
 }
 
 // Write "Hello world" as qDebug message and
 // "Don't panic!" as a qWarning message.
-void useful::hello() {
+void hello::world() {
     qDebug() << "Hello world";
     qWarning() << "Don't panic!";
 }

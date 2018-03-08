@@ -1,6 +1,6 @@
 #include <QTest>
 #include "test_runner.h"
-#include "useful.h"
+#include "hello.h"
 
 #define POINT(test_name, point) qInfo("TMC:"#test_name"."#point)
 
@@ -13,8 +13,8 @@ void test_runner::hello_worlds() {
     QTest::ignoreMessage(QtDebugMsg, "Hello world");
     QTest::ignoreMessage(QtWarningMsg, "Don't panic!");
 
-    useful test_useful;
+    hello test_hello;
 
     POINT(hello_worlds, 1);
-    test_useful.hello();
+    test_hello.world();
 }

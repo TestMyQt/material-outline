@@ -12,11 +12,11 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += main.cpp \
         test_runner.cpp \
-        $$PWD/../src/useful.cpp
+        $$PWD/../src/hello.cpp
 
 HEADERS += \
         test_runner.h \
-        $$PWD/../src/useful.h
+        $$PWD/../src/hello.h
 
 
 INCLUDEPATH += $$PWD/../src
