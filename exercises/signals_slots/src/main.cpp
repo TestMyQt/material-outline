@@ -18,6 +18,8 @@ using namespace std;
 int main(int argc, char *argv[]) {
     Sender sender;
     Receiver receiver;
+    // Location of the connects is bit in question. Main() seems like a
+    // good place, but how do we test then?
     QObject::connect(&sender, &Sender::textSignal, &receiver, &Receiver::textSlot);
     QObject::connect(&sender, &Sender::numberSignal, &receiver, &Receiver::numberSlot);
     sender.sendText("testi");
