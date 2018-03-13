@@ -2,16 +2,20 @@
 #define TEST_RUNNER_H
 
 #include <QObject>
+#include <sender.h>
+#include <receiver.h>
 
 class test_runner : public QObject {
 
 	Q_OBJECT
 
 	public:
-		explicit test_runner(QObject *parent = nullptr);
+        explicit test_runner(QObject *parent = nullptr);
 
     private:
         QtMessageHandler m_oldMessageHandler;
+        Sender sender;
+        Receiver receiver;
 
 	signals:
 

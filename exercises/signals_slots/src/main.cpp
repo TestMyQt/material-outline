@@ -15,11 +15,13 @@ using namespace std;
 // On Receiver create the corresponding slots
 // textSlot() that uses QDebug to print out the message
 // numberSlot() that uses QDebug to print out the sum
+//
+// Perhaps we'll just give the students the connect()s on the template?
+// Point of the exercise is to learn the QObject declaration for the
+// classes that use signal/slots.
 int main(int argc, char *argv[]) {
     Sender sender;
     Receiver receiver;
-    // Location of the connects is bit in question. Main() seems like a
-    // good place, but how do we test then?
     QObject::connect(&sender, &Sender::textSignal, &receiver, &Receiver::textSlot);
     QObject::connect(&sender, &Sender::numberSignal, &receiver, &Receiver::numberSlot);
     sender.sendText("testi");
