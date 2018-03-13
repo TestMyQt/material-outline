@@ -11,6 +11,8 @@ test_runner::test_runner(QObject *parent) : QObject(parent)
 
 }
 
+// Instead of a generated list, we will probably want to use a short written out
+// test list here, and then possibly have more complicated one just on the server.
 void test_runner::list_modified_correctly() {
     useful test_useful;
     POINT(list_modified_correctly, 1.1);

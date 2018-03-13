@@ -5,15 +5,15 @@ useful::useful() {
 
 }
 
-// 1) Make a function that takes a QList<int> as an
-// argument and uses a mutabel iterator to multiply
-// all numbers divisible by 5 by 3.
-// 2) Make a function that takes a QMap<QString, float> as an
-// argument and returns a QList<float> of all heights where
-// the name start with an 'A'.
-// 3) Same as 2) but return QList<QString> of names of people
-// who are taller than 1.80m. You can assume that no two people
-// are the same height.
+// 1) Make a function listPractice(QList<int> list) that
+// uses a mutable iterator to multiply all numbers divisible by 5 by 3,
+// and then returns the list.
+// 2) Make a function heights(QMap<QString, float> heights) that
+// returns a QList<float> of heights of people whose name starts with 'A'.
+// Return them in the order QMap holds them (by key).
+// 3) Make a function names(QMap<QString, float> heights) that returns
+// a QList<QString> of names of people who are taller than 1.80m. You
+// can assume that heights are unique. Use alphabetical order here as well.
 QList<int> useful::listPractise(QList<int> list)
 {
     QMutableListIterator<int> i(list);
