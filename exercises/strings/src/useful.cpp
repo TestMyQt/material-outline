@@ -5,9 +5,16 @@ useful::useful() {
 
 }
 
-// Some basic string manipulation. Currently only tested to have
-// correct qDebug output, not sure if possible to test if certain
-// function like .append has been used (nor if that's necessary)
+// 1) Create a QString with the text "Qt rules " and then
+// add the number "42" to it using QStrings appending function.
+// Then print it the QDebug output.
+// 2) Use the same QString. Use insert to add the word "always"
+// after the first word, and then print the string with QDebug.
+// 3) Make a copy of the string and use a loop to append it to
+// the original (seperated by a space) 10 times. Again print
+// the string with QDebug.
+// 4) Count the amount of times "Qt" appears in the string
+// print out "Qt appeared x times" with QDebug.
 void useful::string()
 {
     QString string("Qt rules ");
