@@ -4,11 +4,12 @@
 #include <QMap>
 #include <QString>
 
-class useful {
+class Useful
+{
 
 	public:
 
-        useful();
+        Useful();
 
         QList<int> listPractise(QList<int> list);
         QList<float> heights(QMap<QString, float> heights);

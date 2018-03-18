@@ -10,11 +10,11 @@ class Sender : public QObject
 public:
     explicit Sender(QObject *parent = 0);
 
-    void sendText(QString message);
+    void sendText(const QString &message);
     void sendNumbers(int first, int second);
 
 signals:
-    void textSignal(QString message);
+    void textSignal(const QString &message);
     void numberSignal(int first, int second);
 };
 

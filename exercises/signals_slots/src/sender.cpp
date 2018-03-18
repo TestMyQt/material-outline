@@ -1,11 +1,12 @@
 #include "sender.h"
 
-Sender::Sender(QObject *parent) : QObject(parent)
+Sender::Sender(QObject *parent)
+    : QObject(parent)
 {
 
 }
 
-void Sender::sendText(QString message)
+void Sender::sendText(const QString &message)
 {
     emit textSignal(message);
 }

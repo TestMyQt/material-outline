@@ -6,7 +6,8 @@
 
 #define POINT(test_name, point) qInfo("TMC:"#test_name"."#point)
 
-test_runner::test_runner(QObject *parent) : QObject(parent)
+test_runner::test_runner(QObject *parent)
+    : QObject(parent)
 {
     QObject::connect(&sender, &Sender::textSignal, &receiver, &Receiver::textSlot);
     QObject::connect(&sender, &Sender::numberSignal, &receiver, &Receiver::numberSlot);
@@ -24,29 +25,29 @@ void myMessageOutput(QtMsgType type, const QMessageLogContext &context, const QS
     switch (type) {
     case QtInfoMsg:
         txt = QString("Info: %1 %2 %3:").arg(context.file).arg(context.line).arg(context.function);
-        ts << txt <<"\t"<< QString(msg)<<endl;
+        ts << txt << "\t" << QString(msg) << endl;
         break;
     case QtDebugMsg:
         txt = QString("Debug: %1 %2 %3:").arg(context.file).arg(context.line).arg(context.function);
-        ts << txt <<"\t"<< QString(msg)<<endl;
+        ts << txt << "\t" << QString(msg) << endl;
         break;
     case QtWarningMsg:
         txt = QString("Warning: %1 %2 %3:").arg(context.file).arg(context.line).arg(context.function);
-        ts << txt <<"\t"<< QString(msg)<<endl;
-    break;
+        ts << txt << "\t" << QString(msg) << endl;
+        break;
     case QtCriticalMsg:
         txt = QString("Critical: %1 %2 %3:").arg(context.file).arg(context.line).arg(context.function);
-        ts << txt <<"\t"<< QString(msg)<<endl;
-    break;
+        ts << txt << "\t" << QString(msg) << endl;
+        break;
     case QtFatalMsg:
         txt = QString("Fatal: %1 %2 %3:").arg(context.file).arg(context.line).arg(context.function);
-        ts << txt <<"\t"<< QString(msg)<<endl;
+        ts << txt <<"\t" << QString(msg) << endl;
         abort();
     }
 
-    if(context.category == "focus")
+    if (context.category == "focus")
     {
-        std::cout<< txt.toStdString() <<"\t"<< QString(msg).toStdString()<<std::endl;
+        std::cout<< txt.toStdString() << "\t" << QString(msg).toStdString() << std::endl;
     }
 }
 

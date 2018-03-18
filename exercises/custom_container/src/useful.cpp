@@ -2,7 +2,7 @@
 #include <QDebug>
 #include <QList>
 
-useful::useful() {
+Useful::Useful() {
 
 }
 
@@ -20,15 +20,15 @@ useful::useful() {
 //      QMap<int, Student> removeDivisibleStudents(int divisor)
 // 4) Counts the amount of students with a name starting with a char.
 //      int countStudentsStartingWith(char n)
-void useful::addStudent(QString name, int credits, int studentNumber)
+void Useful::addStudent(const QString &name, int credits, int studentNumber)
 {
     studentMap.insert(studentNumber, Student(name, credits));
 }
 
-QStringList useful::findByCredits(int credits)
+QStringList Useful::findByCredits(int credits) const
 {
     QStringList names;
-    for (QMap<int, Student>::iterator i = studentMap.begin();
+    for (QMap<int, Student>::const_iterator i = studentMap.begin();
          i != studentMap.end(); i++) {
         if (i.value().getCredits() >= credits) {
             names.append(i.value().getName());
@@ -37,7 +37,7 @@ QStringList useful::findByCredits(int credits)
     return names;
 }
 
-QMap<int, Student> useful::removeDivisibleStudents(int divisor)
+QMap<int, Student> Useful::removeDivisibleStudents(int divisor)
 {
     QMutableMapIterator<int, Student> i(studentMap);
     while (i.hasNext()) {
@@ -49,10 +49,10 @@ QMap<int, Student> useful::removeDivisibleStudents(int divisor)
     return studentMap;
 }
 
-int useful::countStudentsStartingWith(char n)
+int Useful::countStudentsStartingWith(QChar n) const
 {
     int count = 0;
-    for (QMap<int, Student>::iterator i = studentMap.begin();
+    for (QMap<int, Student>::const_iterator i = studentMap.begin();
          i != studentMap.end(); i++) {
         if (i.value().getName().startsWith(n))
             count++;

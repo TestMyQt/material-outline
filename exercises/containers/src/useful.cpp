@@ -1,7 +1,8 @@
 #include "useful.h"
 #include <QDebug>
 
-useful::useful() {
+Useful::Useful()
+{
 
 }
 
@@ -14,7 +15,7 @@ useful::useful() {
 // 3) Make a function names(QMap<QString, float> heights) that returns
 // a QList<QString> of names of people who are taller than 1.80m. You
 // can assume that heights are unique. Use alphabetical order here as well.
-QList<int> useful::listPractise(QList<int> list)
+QList<int> Useful::listPractise(QList<int> list)
 {
     QMutableListIterator<int> i(list);
     while (i.hasNext()) {
@@ -26,7 +27,7 @@ QList<int> useful::listPractise(QList<int> list)
     return list;
 }
 
-QList<float> useful::heights(QMap<QString, float> heights)
+QList<float> Useful::heights(QMap<QString, float> heights)
 {
     QList<float> heightList;
     for (QMap<QString, float>::iterator i = heights.begin(); i != heights.end(); i++) {
@@ -36,11 +37,11 @@ QList<float> useful::heights(QMap<QString, float> heights)
     return heightList;
 }
 
-QList<QString> useful::names(QMap<QString, float> heights)
+QList<QString> Useful::names(QMap<QString, float> heights)
 {
     QList<QString> nameList;
     for (QMap<QString, float>::iterator i = heights.begin(); i != heights.end(); i++) {
-        if (i.value() > 1.80)
+        if (i.value() > 1.80f)
             nameList.append(heights.key(i.value()));
     }
     return nameList;

@@ -1,7 +1,8 @@
 #include "useful.h"
 #include <QDebug>
 
-useful::useful() {
+Useful::Useful()
+{
 
 }
 
@@ -15,7 +16,7 @@ useful::useful() {
 // the string with QDebug.
 // 4) Count the amount of times "Qt" appears in the string
 // print out "Qt appeared x times" with QDebug.
-void useful::string()
+void Useful::string()
 {
     QString string("Qt rules ");
     string.append(QString::number(42));

@@ -6,14 +6,15 @@
 
 #define POINT(test_name, point) qInfo("TMC:"#test_name"."#point)
 
-test_runner::test_runner(QObject *parent) : QObject(parent)
+test_runner::test_runner(QObject *parent)
+    : QObject(parent)
 {
 
 }
 
 void test_runner::find_by_credits_test()
 {
-    useful test_useful;
+    Useful test_useful;
     POINT(find_by_credits_test, 1.1);
     test_useful.addStudent("Mark Markdown", 15, 1233);
     test_useful.addStudent("Linus Torvalds", 240, 1454);
@@ -25,7 +26,7 @@ void test_runner::find_by_credits_test()
 
 void test_runner::remove_divisible_students_test()
 {
-    useful test_useful;
+    Useful test_useful;
     POINT(remove_divisible_students, 1.2);
     test_useful.addStudent("Mark Markdown", 15, 1233);
     test_useful.addStudent("Linus Torvalds", 240, 1454);
@@ -36,7 +37,7 @@ void test_runner::remove_divisible_students_test()
 
 void test_runner::count_students_starting_with_test()
 {
-    useful test_useful;
+    Useful test_useful;
     POINT(count_students_starting_with, 1.3);
     test_useful.addStudent("Mark Markdown", 15, 1233);
     test_useful.addStudent("Linus Torvalds", 240, 1454);

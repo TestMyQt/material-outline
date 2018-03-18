@@ -3,7 +3,8 @@
 
 #include <QObject>
 
-class test_runner : public QObject {
+class test_runner : public QObject
+{
 
 	Q_OBJECT
 

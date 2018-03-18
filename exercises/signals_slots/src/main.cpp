@@ -19,12 +19,13 @@ using namespace std;
 // Perhaps we'll just give the students the connect()s on the template?
 // Point of the exercise is to learn the QObject declaration for the
 // classes that use signal/slots.
-int main(int argc, char *argv[]) {
+int main(int argc, char *argv[])
+{
     Sender sender;
     Receiver receiver;
     QObject::connect(&sender, &Sender::textSignal, &receiver, &Receiver::textSlot);
     QObject::connect(&sender, &Sender::numberSignal, &receiver, &Receiver::numberSlot);
-    sender.sendText("testi");
+    sender.sendText("test");
     sender.sendNumbers(15, -4);
 
     QCoreApplication a(argc, argv);

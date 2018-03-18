@@ -6,15 +6,17 @@
 
 #define POINT(test_name, point) qInfo("TMC:"#test_name"."#point)
 
-test_runner::test_runner(QObject *parent) : QObject(parent)
+test_runner::test_runner(QObject *parent)
+    : QObject(parent)
 {
 
 }
 
 // Instead of a generated list, we will probably want to use a short written out
 // test list here, and then possibly have more complicated one just on the server.
-void test_runner::list_modified_correctly() {
-    useful test_useful;
+void test_runner::list_modified_correctly()
+{
+    Useful test_useful;
     POINT(list_modified_correctly, 1.1);
 
     QList<int> list;
@@ -33,31 +35,33 @@ void test_runner::list_modified_correctly() {
     }
 }
 
-void test_runner::correct_heights_returned() {
-    useful test_useful;
+void test_runner::correct_heights_returned()
+{
+    Useful test_useful;
     POINT(correct_heights_returned, 1.2);
     QMap<QString, float> map;
-    map.insert("Mark", 1.82);
-    map.insert("Anton", 1.90);
-    map.insert("Liisa", 1.59);
-    map.insert("Anna", 1.64);
+    map.insert("Mark", 1.82f);
+    map.insert("Anton", 1.90f);
+    map.insert("Liisa", 1.59f);
+    map.insert("Anna", 1.64f);
     QList<float> correctHeights;
-    correctHeights.append(1.64);
-    correctHeights.append(1.90);
+    correctHeights.append(1.64f);
+    correctHeights.append(1.90f);
     QList<float> returned = test_useful.heights(map);
     QVERIFY(correctHeights.size() == returned.size());
     for (int i = 0; i < returned.size(); i++)
-        QVERIFY(returned[i] == correctHeights[i]);
+        QVERIFY(qFuzzyCompare(returned[i], correctHeights[i]));
 }
 
-void test_runner::correct_names_returned() {
-    useful test_useful;
+void test_runner::correct_names_returned()
+{
+    Useful test_useful;
     POINT(correct_names_returned, 1.3);
     QMap<QString, float> map;
-    map.insert("Mark", 1.82);
-    map.insert("Anton", 1.90);
-    map.insert("Liisa", 1.59);
-    map.insert("Anna", 1.64);
+    map.insert("Mark", 1.82f);
+    map.insert("Anton", 1.90f);
+    map.insert("Liisa", 1.59f);
+    map.insert("Anna", 1.64f);
     QList<QString> correctNames;
     correctNames.append("Anton");
     correctNames.append("Mark");

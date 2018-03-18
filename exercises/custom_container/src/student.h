@@ -8,11 +8,11 @@ class Student
 {
 public:
     Student();
-    Student(QString name, int credits);
+    Student(const QString &name, int credits);
 
-    QString getName();
-    void setName(QString name);
-    int getCredits();
+    QString getName() const;
+    void setName(const QString &name);
+    int getCredits() const;
     void setCredits(int credits);
 
 private:

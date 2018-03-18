@@ -3,23 +3,24 @@
 
 #include <QObject>
 
-class test_runner : public QObject {
+class test_runner : public QObject
+{
 
-	Q_OBJECT
+    Q_OBJECT
 
-	public:
-		explicit test_runner(QObject *parent = nullptr);
+public:
+    explicit test_runner(QObject *parent = nullptr);
 
-    private:
-        QtMessageHandler m_oldMessageHandler;
+signals:
 
-	signals:
+public slots:
 
-	public slots:
+private slots:
+    void execute_strings();
+    void correct_strings();
 
-	private slots:
-        void execute_strings();
-        void correct_strings();
+private:
+    QtMessageHandler m_oldMessageHandler;
 
 };
 

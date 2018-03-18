@@ -5,27 +5,28 @@
 #include <sender.h>
 #include <receiver.h>
 
-class test_runner : public QObject {
+class test_runner : public QObject
+{
 
-	Q_OBJECT
+    Q_OBJECT
 
-	public:
-        explicit test_runner(QObject *parent = nullptr);
+public:
+    explicit test_runner(QObject *parent = nullptr);
 
-    private:
-        QtMessageHandler m_oldMessageHandler;
-        Sender sender;
-        Receiver receiver;
+signals:
 
-	signals:
+public slots:
 
-	public slots:
+private slots:
+    void text_signal_test();
+    void text_signal_test_read();
+    void numbers_signal_test();
+    void numbers_signal_test_read();
 
-	private slots:
-        void text_signal_test();
-        void text_signal_test_read();
-        void numbers_signal_test();
-        void numbers_signal_test_read();
+private:
+    QtMessageHandler m_oldMessageHandler;
+    Sender sender;
+    Receiver receiver;
 };
 
 #endif

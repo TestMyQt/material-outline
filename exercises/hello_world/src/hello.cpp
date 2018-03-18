@@ -1,13 +1,15 @@
 #include "hello.h"
 #include <QDebug>
 
-hello::hello() {
+Hello::Hello()
+{
 
 }
 
 // Write "Hello world" as qDebug message and
 // "Don't panic!" as a qWarning message.
-void hello::world() {
+void Hello::world()
+{
     qDebug() << "Hello world";
     qWarning() << "Don't panic!";
 }

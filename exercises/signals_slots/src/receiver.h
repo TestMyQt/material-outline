@@ -11,7 +11,7 @@ public:
     explicit Receiver(QObject *parent = 0);
 
 public slots:
-    void textSlot(QString message);
+    void textSlot(const QString &message);
     void numberSlot(int first, int second);
 };
 

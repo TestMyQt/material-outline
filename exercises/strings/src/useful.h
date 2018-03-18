@@ -1,13 +1,14 @@
 #ifndef USEFUL_H
 #define USEFUL_H
 
-class useful {
+class Useful
+{
 
-	public:
+public:
 
-        useful();
+    Useful();
 
-        void string();
+    void string();
 
 };
 

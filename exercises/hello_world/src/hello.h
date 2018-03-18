@@ -1,11 +1,11 @@
 #ifndef HELLO_H
 #define HELLO_H
 
-class hello {
+class Hello {
 
 	public:
 
-        hello();
+        Hello();
 
         void world();
 

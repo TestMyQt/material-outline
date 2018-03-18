@@ -4,16 +4,18 @@
 
 #define POINT(test_name, point) qInfo("TMC:"#test_name"."#point)
 
-test_runner::test_runner(QObject *parent) : QObject(parent)
+test_runner::test_runner(QObject *parent)
+    : QObject(parent)
 {
 
 }
 
-void test_runner::hello_worlds() {
+void test_runner::hello_worlds()
+{
     QTest::ignoreMessage(QtDebugMsg, "Hello world");
     QTest::ignoreMessage(QtWarningMsg, "Don't panic!");
 
-    hello test_hello;
+    Hello test_hello;
 
     POINT(hello_worlds, 1);
     test_hello.world();

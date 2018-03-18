@@ -1,12 +1,13 @@
 #include "receiver.h"
 #include <QDebug>
 
-Receiver::Receiver(QObject *parent) : QObject(parent)
+Receiver::Receiver(QObject *parent)
+    : QObject(parent)
 {
 
 }
 
-void Receiver::textSlot(QString message)
+void Receiver::textSlot(const QString &message)
 {
     qDebug() << message;
 }
