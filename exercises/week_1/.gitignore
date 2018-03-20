@@ -1,6 +1,0 @@
-*build-*
-*.pro.user
-*.pro.user.*
-./*/build/*
-./*/out.txt
-./*/tmc_test_results.xml
