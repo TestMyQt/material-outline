@@ -8,35 +8,10 @@ TestCase {
 
     App.HelloWorld {
         id: helloWorld
-        textThing: "Hello World!"
+        textThing: "Don't Panic!"
     }
 
     function test_world() {
-        compare(helloWorld.textThing, "Hello World!")
+        compare(helloWorld.textThing, "Don't Panic!")
     }
 }
-
-//Item {
-//    id: root
-//    width: 400
-//    height: 300
-
-////    HelloWorld {
-////        id: testObject
-////    }
-
-//    TestCase {
-//        name: "Hello tests"
-//        id: testCase
-
-//        function initTestCase() {
-
-//        }
-
-//        function test_hello() {
-//            var item = createTemporaryQmlObject("import QtQuick 2.0; import \"" + Qt.resolvedUrl("../src") + "\"; HelloWorld {}", testCase)
-//            console.log(item.text1)
-//            compare(item, "Hello World!")
-//        }
-//    }
-//}
