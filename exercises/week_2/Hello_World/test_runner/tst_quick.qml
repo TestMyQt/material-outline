@@ -8,10 +8,11 @@ TestCase {
 
     App.HelloWorld {
         id: helloWorld
+        textThing: "Hello World!"
     }
 
     function test_world() {
-        compare(helloWorld.textThing.text, "Hello World!")
+        compare(helloWorld.textThing, "Hello World!")
     }
 }
 
