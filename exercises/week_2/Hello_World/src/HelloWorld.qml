@@ -5,7 +5,7 @@ Item {
     id: world
     width: 400
     height: 200
-    Text {
+    property var textThing: Text {
         id: text1
         x: 38
         y: 41

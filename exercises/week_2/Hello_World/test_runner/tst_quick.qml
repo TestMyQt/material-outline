@@ -9,9 +9,9 @@ TestCase {
     App.HelloWorld {
         id: helloWorld
     }
+
     function test_world() {
-        console.log(helloWorld)
-        compare(helloWorld, "Hello World!")
+        compare(helloWorld.textThing.text, "Hello World!")
     }
 }
 

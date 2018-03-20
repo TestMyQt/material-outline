@@ -1,5 +1,6 @@
 *.pro.user
 *.pro.user.*
 build*/
+*.qmlc
 out.txt
 tmc_test_results.xml
