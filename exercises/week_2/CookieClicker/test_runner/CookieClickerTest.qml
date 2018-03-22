@@ -1,5 +1,5 @@
 import QtQuick 2.0
-import "../src/CookieClicker.qml" 1.00
+import "../src/" 1.00
 
 CookieClicker {
     welcome: "Cookie clicker!"

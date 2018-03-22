@@ -29,9 +29,6 @@ Item {
             spy.target = cookie
             spy.signalName = "clickChanged"
 
-            for (var prop in cookie)
-                console.log(prop)
-
             compare(spy.count, 0)
             mouseClick(cookie, 100, 100, Qt.LeftButton)
             compare(spy.count, 1)
@@ -41,7 +38,7 @@ Item {
         }
 
         function test_cookie_text() {
-            var component = Qt.createComponent("../src/CookieClicker.qml")
+            var component = Qt.createComponent("CookieClickerTest.qml")
             compare(component.status, Component.Ready)
             var cookie = component.createObject(container);
 
@@ -52,7 +49,10 @@ Item {
 
             mouseClick(cookie, 100, 100, Qt.LeftButton)
             compare(cookie.click, 2)
-            compare(cookie.statusText.text, "Cookies clicked: 2")
+            compare(cookie.status.text, "Chocolate cookies clicked: 1")
+            mouseClick(cookie, 100, 100, Qt.LeftButton)
+            compare(cookie.click, 3)
+            compare(cookie.status.text, "Chocolate cookies clicked: 2")
 
             cookie.destroy()
         }
