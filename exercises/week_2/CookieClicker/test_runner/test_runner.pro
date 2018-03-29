@@ -1,5 +1,5 @@
 TEMPLATE = app
-TARGET = tst_quick
+TARGET = tst_cookieclicker
 QT += quick core testlib
 CONFIG += c++11 warn_on qmltestcase
 CONFIG -= app_bundle

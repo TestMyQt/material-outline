@@ -16,7 +16,12 @@ Item {
             id: spy
         }
 
+        function quickPOINT(function_name, point) {
+            console.info("TMC:" + function_name + "." + point);
+        }
+
         function test_cookie_click() {
+            quickPOINT("test_cookie_click", "click_point");
             var component = Qt.createComponent("CookieClickerTest.qml")
             compare(component.status, Component.Ready)
             var cookie = component.createObject(container);
@@ -38,6 +43,7 @@ Item {
         }
 
         function test_cookie_text() {
+            quickPOINT("test_cookie_text", "text_point");
             var component = Qt.createComponent("CookieClickerTest.qml")
             compare(component.status, Component.Ready)
             var cookie = component.createObject(container);

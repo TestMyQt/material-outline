@@ -42,7 +42,6 @@ Item {
         properties: "scale"
         from: 0.6
         to: 0.99
-        loops: Animation.alwaysRunToEnd
         easing {
             type: Easing.OutInBounce
             overshoot: 50;
